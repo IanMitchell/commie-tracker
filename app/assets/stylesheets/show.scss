@@ -1,0 +1,111 @@
+$color-finished: #2ecc40;
+$color-pending: #ff4136;
+$color-neutral: #333333;
+$color-light: #888888;
+$border-size: 2px;
+
+#airing {
+  .show-step-finished {
+    background-color: lighten($color-finished, 45%);
+    border-top: $border-size solid $color-finished;
+
+    .show-staff-position {
+      color: $color-finished;
+    }
+  }
+
+  .show-step-pending {
+    background-color: lighten($color-pending, 35%);
+    border-top: $border-size solid $color-pending;
+
+    .show-staff-position {
+      color: $color-pending;
+    }
+  }
+}
+
+#completed,
+#incomplete,
+#dropped {
+  .show-staff {
+    border-top: $border-size solid $color-neutral;
+  }
+
+  .show-old {
+    font-weight: normal;
+    color: $color-light;
+  }
+}
+
+section {
+  margin-bottom: 50px;
+  display: flex;
+  align-content: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .show {
+    width: 30%;
+    min-width: 450px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(lighten($color-neutral, 40%), 0.75);
+
+    .show-info {
+      padding: 10px 10px 3px 10px;
+
+      h3 {
+        font: {
+          size: 24px;
+          weight: 100;
+        }
+        letter-spacing: 3px;
+      }
+
+      .show-meta {
+        box-sizing: border-box;
+        color: $color-light;
+        font-size: 12px;
+        margin-top: 15px;
+        font-style: oblique;
+
+        .separator {
+          padding: 0 7px;
+        }
+
+        .show-old {
+          font-weight: bold;
+          color: $color-pending;
+        }
+      }
+    }
+
+    .show-staff {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      clear: both;
+      overflow: auto;
+
+      div {
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        padding: 5px 10px 10px 10px;
+        font-size: 14px;
+
+        .show-staff-position {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 9px;
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

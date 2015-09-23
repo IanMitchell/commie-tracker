@@ -1,0 +1,36 @@
+header {
+  background: #333;
+  color: #fff;
+  overflow: auto;
+
+  h1 {
+    float: left;
+    padding: 5px;
+    font: {
+      weight: 100;
+    }
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      list-style: none;
+
+      li {
+        float: left;
+      }
+
+      li a {
+        padding: 15px;
+        color: #fff;
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+          background: #555;
+        }
+      }
+    }
+  }
+}
